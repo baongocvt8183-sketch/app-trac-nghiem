@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
+        <TextView android:id="@+id/btnBack"
+            android:layout_width="48dp" android:layout_height="48dp"
+            android:contentDescription="Quay lại" android:gravity="center"
+            android:text="‹" android:textColor="@color/text_primary" android:textSize="40sp" />
+        <TextView android:id="@+id/tvToolbarTitle"
+            android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:gravity="center"
+            android:text="Chi tiết môn học" android:textColor="@color/text_primary"
+            android:textSize="19sp" android:textStyle="bold" />
+        <TextView android:id="@+id/btnMenu"
+            android:layout_width="48dp" android:layout_height="48dp"
+            android:contentDescription="Tùy chọn" android:gravity="center"
+            android:text="⋮" android:textColor="@color/text_primary" android:textSize="28sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="168dp"
+                android:background="@drawable/bg_primary_button"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="20dp">
+                <TextView android:id="@+id/tvIcon"
+                    android:layout_width="76dp" android:layout_height="76dp"
+                    android:background="@drawable/bg_icon_blue" android:gravity="center"
+                    android:text="&lt;/&gt;" android:textColor="@color/white"
+                    android:textSize="23sp" android:textStyle="bold" />
+                <LinearLayout
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="18dp" android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView android:id="@+id/tvName"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:text="Lập trình Kotlin" android:textColor="@color/white"
+                        android:textSize="24sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/tvDescription"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp" android:maxLines="2"
+                        android:text="Kiến thức từ cơ bản đến nâng cao"
+                        android:textColor="#EDE5FF" android:textSize="14sp" />
+                    <TextView android:id="@+id/tvStats"
+                        android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp" android:text="10 câu • 40% hoàn thành"
+                        android:textColor="@color/white" android:textSize="13sp" android:textStyle="bold" />
+                    <ProgressBar android:id="@+id/progressSubject"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent" android:layout_height="7dp"
+                        android:layout_marginTop="7dp" android:max="100"
+                        android:progress="40" android:progressTint="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView style="@style/SectionTitle"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="22dp" android:text="Thao tác nhanh" />
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="84dp"
+                android:layout_marginTop="10dp" android:orientation="horizontal">
+                <TextView android:id="@+id/actionContinue" style="@style/QuickAction" android:text="▶&#10;Tiếp tục" />
+                <TextView android:id="@+id/actionRandom" style="@style/QuickAction" android:text="⤨&#10;Đề ngẫu nhiên" />
+                <TextView android:id="@+id/actionDocument" style="@style/QuickAction" android:text="▤&#10;Tài liệu" />
+                <TextView android:id="@+id/actionStats" style="@style/QuickAction" android:text="▥&#10;Thống kê" />
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent" android:layout_height="58dp"
+                android:layout_marginTop="16dp" android:scrollbars="none">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+                    android:gravity="center_vertical" android:orientation="horizontal">
+                    <TextView android:id="@+id/tabQuizzes" style="@style/SubjectTab" android:text="Đề thi" />
+                    <TextView android:id="@+id/tabStudy" style="@style/SubjectTab" android:text="Ôn tập" />
+                    <TextView android:id="@+id/tabDocuments" style="@style/SubjectTab" android:text="Tài liệu" />
+                    <TextView android:id="@+id/tabStatistics" style="@style/SubjectTab" android:text="Thống kê" />
+                    <TextView android:id="@+id/tabDiscussion" style="@style/SubjectTab" android:text="Thảo luận" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvQuizSets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView android:id="@+id/tvTabPlaceholder"
+                android:layout_width="match_parent" android:layout_height="180dp"
+                android:background="@drawable/bg_card" android:gravity="center"
+                android:padding="24dp" android:textColor="@color/text_secondary"
+                android:textSize="16sp" android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/view_bottom_nav" />
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QuizMaster</string>
+    <string name="home">Trang chủ</string>
+    <string name="subjects">Môn học</string>
+    <string name="profile">Hồ sơ</string>
+    <string name="more">Thêm</string>
+    <string name="stats">Thống kê</string>
+</resources>

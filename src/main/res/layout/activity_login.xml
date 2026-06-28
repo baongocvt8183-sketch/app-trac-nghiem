@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:gravity="center" android:orientation="vertical" android:padding="28dp">
+        <TextView android:layout_width="72dp" android:layout_height="72dp"
+            android:background="@drawable/bg_icon_purple" android:gravity="center"
+            android:text="💡" android:textSize="34sp" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="18dp" android:text="QuizMaster"
+            android:textColor="@color/text_primary" android:textSize="34sp" android:textStyle="bold" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="6dp" android:text="Học thông minh, tiến bộ mỗi ngày"
+            android:textColor="@color/text_secondary" android:textSize="16sp" />
+        <EditText android:id="@+id/edtEmail" android:layout_width="match_parent"
+            android:layout_height="58dp" android:layout_marginTop="42dp"
+            android:background="@drawable/bg_input" android:hint="Email"
+            android:inputType="textEmailAddress" android:singleLine="true" />
+        <EditText android:id="@+id/edtPassword" android:layout_width="match_parent"
+            android:layout_height="58dp" android:layout_marginTop="14dp"
+            android:background="@drawable/bg_input" android:hint="Mật khẩu (ít nhất 6 ký tự)"
+            android:inputType="textPassword" android:singleLine="true" />
+        <CheckBox android:id="@+id/checkRemember" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="12dp"
+            android:buttonTint="@color/purple" android:text="Ghi nhớ đăng nhập" />
+        <Button android:id="@+id/btnLogin" android:layout_width="match_parent"
+            android:layout_height="58dp" android:layout_marginTop="18dp"
+            android:background="@drawable/bg_primary_button" android:text="Đăng nhập"
+            android:textAllCaps="false" android:textColor="@color/white"
+            android:textSize="17sp" android:textStyle="bold" />
+        <TextView android:id="@+id/tvGuest" android:layout_width="wrap_content"
+            android:layout_height="48dp" android:layout_marginTop="12dp"
+            android:gravity="center" android:text="Tiếp tục với tài khoản Khách"
+            android:textColor="@color/purple" android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

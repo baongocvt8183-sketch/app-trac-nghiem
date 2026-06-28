@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/background" android:orientation="vertical">
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="24dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="72dp"
+                android:gravity="center_vertical" android:orientation="horizontal">
+                <TextView android:layout_width="68dp" android:layout_height="68dp"
+                    android:background="@drawable/bg_icon_purple" android:gravity="center"
+                    android:text="💡" android:textSize="31sp" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="QuizMaster" android:textColor="@color/text_primary"
+                        android:textSize="29sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/tvWelcome" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="Mừng trở lại, Khách"
+                        android:textColor="@color/text_secondary" android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" android:background="@drawable/bg_card"
+                android:orientation="vertical" android:padding="22dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Mừng trở lại" android:textColor="@color/text_secondary" android:textStyle="bold" />
+                <TextView android:id="@+id/tvName" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:text="Khách"
+                    android:textColor="@color/text_primary" android:textSize="25sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tvInitials" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:gravity="end" android:text="KH"
+                    android:textColor="@color/text_primary" android:textSize="16sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp" android:text="🔥  1 ngày liên tiếp  🔥     0/20 câu hôm nay"
+                    android:textColor="@color/text_primary" android:textStyle="bold" />
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:layout_marginVertical="30dp" android:background="@color/divider" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="⚡  THỬ THÁCH HÔM NAY" android:textColor="@color/text_secondary"
+                    android:textSize="13sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp" android:text="Đề thi thử THPT 2024"
+                    android:textColor="@color/text_primary" android:textSize="23sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp" android:text="Hoàn thành đề nhận 50 điểm"
+                    android:textColor="@color/text_secondary" android:textSize="15sp" />
+                <Button android:id="@+id/btnChallenge" android:layout_width="match_parent"
+                    android:layout_height="58dp" android:layout_marginTop="18dp"
+                    android:text="Bắt đầu ngay" android:textAllCaps="false"
+                    android:textColor="@color/text_primary" android:textSize="17sp" android:textStyle="bold" />
+            </LinearLayout>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" android:text="✧  Luyện tập nhanh" style="@style/SectionTitle" />
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvQuickSubjects"
+                android:layout_width="match_parent" android:layout_height="230dp"
+                android:layout_marginTop="12dp" android:clipToPadding="false" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/view_bottom_nav" />
+</LinearLayout>

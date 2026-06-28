@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="76dp"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingHorizontal="8dp">
+
+    <TextView android:id="@+id/navStats" style="@style/NavItem" android:text="▥&#10;Thống kê" />
+    <TextView android:id="@+id/navSubjects" style="@style/NavItem" android:text="▤&#10;Môn học" />
+    <TextView android:id="@+id/navHome" style="@style/NavHomeItem" android:text="⌂&#10;Trang chủ" />
+    <TextView android:id="@+id/navProfile" style="@style/NavItem" android:text="♙&#10;Hồ sơ" />
+    <TextView android:id="@+id/navMore" style="@style/NavItem" android:text="⊕&#10;Thêm" />
+</LinearLayout>

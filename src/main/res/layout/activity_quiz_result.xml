@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="28dp">
+
+    <TextView android:layout_width="match_parent" android:layout_height="58dp"
+        android:gravity="center" android:text="Kết quả"
+        android:textColor="@color/text_primary" android:textSize="22sp" android:textStyle="bold" />
+
+    <TextView android:layout_width="142dp" android:layout_height="142dp"
+        android:layout_marginTop="48dp" android:background="@drawable/bg_icon_orange"
+        android:gravity="center" android:text="🏆" android:textSize="64sp" />
+
+    <TextView android:id="@+id/tvScore"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="30dp" android:gravity="center"
+        android:text="8 / 10" android:textColor="@color/text_primary"
+        android:textSize="42sp" android:textStyle="bold" />
+
+    <TextView android:id="@+id/tvMessage"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" android:gravity="center"
+        android:text="Chúc mừng! Bạn đã hoàn thành bài thi."
+        android:textColor="@color/text_secondary" android:textSize="16sp" />
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="34dp" android:background="@drawable/bg_card"
+        android:orientation="vertical" android:padding="22dp">
+        <TextView android:id="@+id/tvCorrect" style="@style/IntroRow" android:text="✓  Số câu đúng" />
+        <TextView android:id="@+id/tvWrong" style="@style/IntroRow" android:text="×  Số câu sai" />
+        <TextView android:id="@+id/tvPercent" style="@style/IntroRow" android:text="◎  Tỷ lệ chính xác" />
+    </LinearLayout>
+
+    <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRetry" android:layout_width="match_parent" android:layout_height="58dp"
+        android:text="Làm lại đề này" android:textAllCaps="false"
+        app:backgroundTint="@color/purple" app:cornerRadius="16dp" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDone" style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent" android:layout_height="58dp"
+        android:layout_marginTop="10dp" android:text="Về danh sách môn học"
+        android:textAllCaps="false" app:cornerRadius="16dp" />
+</LinearLayout>

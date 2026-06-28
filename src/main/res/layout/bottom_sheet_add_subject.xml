@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/formContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="28dp">
+
+        <View
+            android:layout_width="44dp"
+            android:layout_height="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="#C9CAD2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Thêm môn học"
+                android:textColor="@color/text_primary"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btnClose"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Đóng"
+                android:gravity="center"
+                android:text="×"
+                android:textColor="@color/text_primary"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Tên môn học *"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusTopStart="14dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="50">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:maxLength="50"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/descriptionLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Mô tả"
+            app:boxCornerRadiusBottomEnd="14dp"
+            app:boxCornerRadiusBottomStart="14dp"
+            app:boxCornerRadiusTopEnd="14dp"
+            app:boxCornerRadiusTopStart="14dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="300">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:gravity="top"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLength="300"
+                android:maxLines="4" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView style="@style/Label"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="18dp" android:text="CHỌN BIỂU TƯỢNG" />
+
+        <LinearLayout
+            android:id="@+id/iconChoices"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="9dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/iconCode" style="@style/ChoiceIcon" android:text="&lt;/&gt;" />
+            <TextView android:id="@+id/iconGlobe" style="@style/ChoiceIcon" android:text="◎" />
+            <TextView android:id="@+id/iconBook" style="@style/ChoiceIcon" android:text="▤" />
+            <TextView android:id="@+id/iconFlask" style="@style/ChoiceIcon" android:text="⚗" />
+            <TextView android:id="@+id/iconAtom" style="@style/ChoiceIcon" android:text="⚛" />
+            <TextView android:id="@+id/iconLanguage" style="@style/ChoiceIcon" android:text="GB" />
+        </LinearLayout>
+
+        <TextView style="@style/Label"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="14dp" android:text="CHỌN MÀU CHỦ ĐẠO" />
+
+        <LinearLayout
+            android:id="@+id/colorChoices"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/colorPurple" style="@style/ColorChoice" android:background="@drawable/bg_icon_purple" />
+            <TextView android:id="@+id/colorGreen" style="@style/ColorChoice" android:background="@drawable/bg_icon_green" />
+            <TextView android:id="@+id/colorBlue" style="@style/ColorChoice" android:background="@drawable/bg_icon_blue" />
+            <TextView android:id="@+id/colorOrange" style="@style/ColorChoice" android:background="@drawable/bg_icon_orange" />
+            <TextView android:id="@+id/colorRed" style="@style/ColorChoice" android:background="@drawable/bg_icon_red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/coverCard"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_input"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp">
+            <TextView android:layout_width="42dp" android:layout_height="42dp"
+                android:gravity="center" android:text="▧" android:textColor="@color/purple" android:textSize="24sp" />
+            <TextView android:id="@+id/tvCover"
+                android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:text="Chọn ảnh bìa (tùy chọn)"
+                android:textColor="@color/text_secondary" android:textSize="14sp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Chọn" android:textColor="@color/purple" android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchPublic"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:checked="true"
+            android:text="Công khai môn học"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreate"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="12dp"
+            android:text="Tạo môn học"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/purple"
+            app:cornerRadius="16dp" />
+
+        <ProgressBar
+            android:id="@+id/progressCreate"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-44dp"
+            android:indeterminateTint="@color/white"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

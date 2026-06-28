@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:name=".QuizApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_app"
+        android:label="QuizMaster"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.QuizMaster">
+        <activity android:name="activities.QuizResultActivity" />
+        <activity android:name="activities.QuizIntroActivity" />
+        <activity android:name="activities.SubjectDetailActivity" />
+        <activity android:name="activities.QuizActivity" />
+        <activity android:name="activities.EditProfileActivity" />
+        <activity android:name="activities.MoreActivity" />
+        <activity android:name="activities.ProfileActivity" />
+        <activity android:name="activities.SubjectsActivity" />
+        <activity android:name="activities.HomeActivity" />
+        <activity
+            android:name="activities.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>
